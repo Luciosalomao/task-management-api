@@ -17,7 +17,7 @@ export enum TaskStatusEnum {
 export class TaskDto {
   @IsUUID()
   @IsOptional()
-  id: string;
+  id?: string;
 
   @IsString()
   @MinLength(3)
@@ -40,4 +40,9 @@ export class TaskDto {
 export interface FindAllParameters {
   title: string;
   status: string;
+}
+
+export class TaskRouteParameters {
+  @IsUUID()
+  id: string;
 }
