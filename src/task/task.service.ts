@@ -70,12 +70,13 @@ export class TaskService {
   async remove(id: string) {
     const result = await this.taskRepository.delete(id);
 
-    if (!result) {
+    if (result.affected === 0) {
       throw new HttpException(
         `Task with id ${id} not found`,
         HttpStatus.BAD_REQUEST,
       );
     }
+    return { message: 'Task deleted successfully' };
   }
 
   private mapEntityToDto(taskEntity: TaskEntity): TaskDto {
