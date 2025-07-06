@@ -96,3 +96,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Comandos Container Docker
+make run       # builda e roda
+make clean     # remove container e imagem
+make restart   # remove tudo e roda do zero
